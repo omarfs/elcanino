@@ -1,0 +1,17 @@
+site:
+  domain: 'http://##########.org'
+  tracking_code: '##########'
+  tracking_view: '#################'
+
+contact:
+  email: '######@##########.org'
+
+services:
+  linkedin: 'http://linkedin.com/######'
+  twitter: 'http://twitter.com/######'
+  google: 'https://plus.google.com/#####################?rel=author'
+
+related:
+  blog: 'http://blog.##########.org'
+  company: 'http://www.##########.com/'
+
