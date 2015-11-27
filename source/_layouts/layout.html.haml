@@ -10,12 +10,11 @@
       = current_page.data.title || "ideaStudio"
 
     = stylesheet_link_tag "application"
-    = javascript_include_tag  "all" 
 
   %body{:class => page_classes }
     %header.site-header
-      .container
-        = partial "_layouts/nav" 
+      = partial "_layouts/nav" 
     %main.site-main
       .container
         = yield
+    = javascript_include_tag  "all"
