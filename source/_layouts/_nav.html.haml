@@ -1,16 +1,12 @@
+.logo
+	= image_tag('logo.svg')
 %nav.site-nav{ :role => 'navigation'}
-	.logo
-		= image_tag('logo.svg')
-	.nav-links
-		%ul
-			%li
-				= link_to 'Home', '/home' 
-			%li
-				= link_to 'About', '/about/'
-			-#%li 
-			-#	.logo
-			-#		= link_to image_tag('drawing.svg') 
-			%li 
-				= link_to 'Pack', '/contact/'
-			%li
-				= link_to 'Contact', '/pack/'
+	%ul
+		%li
+			= link_to 'Home', '/home' 
+		%li
+			= link_to 'About', '/about/' 
+		%li 
+			= link_to ' k9 ', '/staff/'
+		%li
+			= link_to 'Contact', '/contact/'

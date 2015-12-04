@@ -1,6 +1,6 @@
 // Colors
 
-$ec-green: #009B77;
+$ec-pantonegreen: #009B77;
 $ec-dark-grey: #1A1A1A;
 $ec-blue: #0645AD;
 $ec-red: #D60054;
@@ -29,7 +29,7 @@ body{
 		font-size: 300 125%/1.5;
 	}
 }
-section{
+section, article{
 	position: relative;
 	@include clearfix;
 	> header{
@@ -44,9 +44,36 @@ section{
 		}
 	}
 }
+.content{
+	padding: 3em 4%;
+	box-sizing: border-box;
+	@include clearfix;
+	@media screen and (min-width: 450px){
+		padding: 6em 4%;
+	}
+	@media screen and (min-width: 750px){
+		padding: 12em 4%;
+	}
+	&.narrow {
+    padding-left: 2em;
+    padding-right: 2em;
+    @media screen and (min-width: 450px) {
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+    @media screen and (min-width: 750px){
+    	padding-left: 8%;
+    	padding-right: 8%;
+    }
+    @media screen and (min-width: 1000px){
+      padding-left: 17%;
+      padding-right: 17%;
+    }
+  }
+}
 .site-header{
 	background-color: rgba($white,0.9);
-	height: 190px;
+	height: 100px;
 	margin: 0 auto;
 	max-width: 1600px;
 	padding: 2em 0;
@@ -58,6 +85,7 @@ section{
 	box-sizing: border-box;
 	@include transition(all 0.5s ease-in-out);
 	@media screen and (min-width: 550px){
+		height: 190px;
 		padding: 4em 2em;
 	}
 	.scrolling & {
@@ -70,7 +98,7 @@ section{
 		}
 	}
 }
-.nav-links{
+.site-nav{
 	text-align: center;
 	font-weight: 400;
 	font-size: 0.8em;
@@ -129,7 +157,7 @@ section{
 	top: 1em;
 	opacity: 1;
 	position: absolute; 
-	overflow: hidden;
+	overflow: hidden;  
 	@include transition(all 0.5s ease);
 	> img {
 		display: inline-block;
@@ -164,11 +192,75 @@ section{
 	//padding: 8em 4%;
 }
 .home{
-	height: 1200px;
+	//height: 1200px;
 	header{
 		h1{
 			text-align: center;
 			font-size: 4em;
 		}
+	}
+	.home-about-us{
+		background-color: $ec-pantonegreen;
+		color: $white;
+		h2{
+			//background-color: $ec-blue;
+			display: block;
+			text-align: center;
+			//width: 100%;
+			font-size: 3.6em;
+			@media screen and (min-width: 750px){
+				//display: block;
+				float: left;
+				margin-right: -100%;
+				margin-left: 0;
+				width: 48%;
+			}
+		}
+		p{
+			//background-color: $ec-red;
+			display: block;
+			margin: 0 0 2em;
+
+			@media screen and (min-width: 750px){
+				//display: block;
+				float: left;
+				margin-right: -100%;
+				margin-left: 52%;
+				width: 48%;	
+			}
+		}
+	}
+	.home-staff{
+		background-color: $ec-red;
+		.cards{
+			@include display(flex);
+			@include flex-wrap(wrap);
+  		@include justify-content(center);
+  		position: relative;
+  		color: $white;
+			.card{
+				@include flex-basis(300px);
+  			@include flex-grow(1);
+				//background-color: $ec-dark-grey;
+				margin: 1em 1.5em;
+				align-items: center;
+				text-align: center;
+				img{
+					overflow: hidden;
+					height: 150px;
+					width: 150px;
+					//max-height: 150px; 
+					border-radius: 100%;
+					background-color: $ec-dark-grey;
+				}
+				h2{
+					padding: 0 1em;
+				}
+				p{
+					padding: 0 1em;
+				}
+			}
+		}
+
 	}
 }
