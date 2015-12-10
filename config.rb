@@ -12,8 +12,7 @@ activate :deploy do |deploy|
   deploy.method = :git
   deploy.build_before = true
   deploy.branch   = "master"
-  deploy.remote   = "git@github.com:omarfs/omarfs.github.io.git"
-  #https://github.com/omarfs/omarfs.github.io.git
+  deploy.remote   = "git@github.com:username/username.github.io.git"
 end
 # Methods defined in the helpers block are available in templates
 # helpers do
