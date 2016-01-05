@@ -1,11 +1,9 @@
 %footer.site-footer.content.narrow
-	//.animated-content
 	%ul.social-icons
 		- data.settings.services.each do |service_name, service_link|
 			%li
 				= link_to service_link do
 					%span=service_name
-					//%i{:class => 'fa fa-' + service_name + ' fa-fw'}
 					%i{:class => "fa fa-#{service_name} fa-fw"}
 	.ec-copy
 		%p

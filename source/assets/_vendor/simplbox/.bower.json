@@ -1,0 +1,13 @@
+{
+  "name": "simplbox",
+  "homepage": "https://github.com/Dendrochronologyy/SimplBox",
+  "_release": "3346c161c8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3346c161c8bb9512f0d09f3b4b7763c1076d622f"
+  },
+  "_source": "git://github.com/Dendrochronologyy/SimplBox.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/Dendrochronologyy/SimplBox.git"
+}

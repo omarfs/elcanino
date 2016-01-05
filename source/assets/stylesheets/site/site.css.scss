@@ -22,12 +22,13 @@ body{
 	max-width: 1600px;
 	position: relative;
 	width: 100%;
-	font-size: 400 100%/1.5;
+	font: 400 100%/1.5;
 	@media screen and (min-width: 1150px){
 		font-size: 112.5%;
 	}
 	@media screen and (min-width: 1350px){
-		font-size: 300 125%/1.5;
+		font-size: 125%;
+		line-height: 1.5;
 	}
 }
 section, article{
@@ -56,12 +57,6 @@ section, article{
 		padding: 12em 4%;
 	}
 	&.narrow {
-    padding-left: 2em;
-    padding-right: 2em;
-    @media screen and (min-width: 450px) {
-      padding-left: 4%;
-      padding-right: 4%;
-    }
     @media screen and (min-width: 750px){
     	padding-left: 8%;
     	padding-right: 8%;
@@ -71,7 +66,42 @@ section, article{
       padding-right: 17%;
     }
   }
+	//
+	&.background {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: $white;
+		padding: 16em 4%;
+		@media screen and (max-width: 550px) {
+			padding: 10em 4%;
+		}
+	}
 }
+//
+.button {
+  //background-color: $ec-pantonegreen;
+  border: none;
+  border-radius: 0;
+  //color: #fff;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1.2em;
+  margin: 0 auto;
+  padding:0.8em 2em;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  &:hover {
+    background-color: $white;
+    color: $ec-pantonegreen;
+    @include transition(all 0.1s ease);
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 1em;
+  }
+}
+//
 .site-header{
 	background-color: rgba($white,1);
 	height: 100px;
@@ -188,22 +218,6 @@ section, article{
 	}
 }
 //
-.site-hooter{
-	position: relative;
-	text-align: center;
-	vertical-align: middle;
-	.social-icons{
-		display: inline;
-		float: left;
-		width: 33%;
-	}
-	.ec-copy{
-		display: inline;
-		float: left;
-		width: 67%;
-	}
-}
-//
 .social-icons {
   margin: 0 0 1.5em;
   padding: 0;
@@ -214,11 +228,8 @@ section, article{
 	li {
 		display: inline;
     margin-right: 1em;
-    font-size: 1.2em;
+    font-size: 1.4em;
 
-    @media screen and (min-width: 450px) {
-      font-size: 1.6em;
-    }
 		@media screen and (min-width: 550px) {
       font-size: 1.8em;
     }
@@ -266,11 +277,6 @@ section, article{
 	}
 }
 //
-.site-main{
-	//position: relative;
-	//@include clearfix;
-	//padding: 8em 4%;
-}
 .home{
 	//height: 1200px;
 	header{
@@ -282,12 +288,12 @@ section, article{
 	.home-about-us{
 		background-color: $ec-pantonegreen;
 		color: $white;
-		h2{
+		h3{
 			//background-color: $ec-blue;
 			display: block;
 			text-align: center;
 			//width: 100%;
-			font-size: 3.6em;
+			//font-size: 3.6em;
 			@media screen and (min-width: 750px){
 				//display: block;
 				float: left;
@@ -297,7 +303,6 @@ section, article{
 			}
 		}
 		p{
-			//background-color: $ec-red;
 			display: block;
 			margin: 0 0 2em;
 
@@ -316,31 +321,59 @@ section, article{
 			@include display(flex);
 			@include flex-wrap(wrap);
   		@include justify-content(center);
-  		position: relative;
   		color: $white;
 			.card{
-				@include flex-basis(300px);
-  			@include flex-grow(1);
-				//background-color: $ec-dark-grey;
+				@include flex-basis(250px);
+  			@include flex-grow(0);
 				margin: 1em 1.5em;
-				align-items: center;
-				text-align: center;
-				img{
+				.card-image{
 					overflow: hidden;
-					height: 150px;
-					width: 150px;
-					//max-height: 150px;
+					max-width: 150px;
+					max-height: 150px;
 					border-radius: 100%;
-					background-color: $ec-dark-grey;
+					margin-left: auto;
+					margin-right: auto;
+					img{
+						max-width: 100%;
+					}
 				}
-				h2{
+				h4{
+					text-align: center;
 					padding: 0 1em;
 				}
 				p{
+					text-align: center;
 					padding: 0 1em;
 				}
 			}
 		}
-
+	}
+}
+.featured-projects{
+	background-color: $ec-blue;
+	color: $white;
+	padding: 0 !important;
+	img{
+		width: 100%;
+	}
+	.button{
+		background-color: $white;
+		&:hover{
+			background-color: rgba($white, 0.7);
+		}
+	}
+	.ft-anim-content{
+		position: relative;
+	}
+	article{
+		background-color: rgba($ec-red, 0.6);
+		background-image: url("../images/hd-boxer-dog.jpg");
+		//display: block;
+		text-align: center;
+		position: relative;
+		opacity: 1;
+		h2,p,.button{
+			position:relative;
+		}
 	}
 }

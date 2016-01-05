@@ -1,5 +1,3 @@
-
-
 var hasClass = function (elem, className){
 	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
 }
@@ -8,7 +6,7 @@ var addClass = function (elem, className){
 	if(!hasClass(elem, className)) {
 		elem.className += ' ' + className;
 	}
-}	
+}
 
 var removeClass = function(elem, className){
 	var newClass = ' ' + elem.className.replace(/[\t\r\n]/g,' ')+' ';
@@ -33,4 +31,6 @@ if ( 'querySelector' in document && 'addEventListener' in window) {
 			removeClass(body,'scrolling')
 		}
 	});
+
+
 }
