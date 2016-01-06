@@ -2,6 +2,6 @@
   - cardslength = data.sitedata.staff.length
   - data.sitedata.staff.each_with_index do |x, index|
     .card{class:[(:"card-first" if index==0),(:"card-last" if index==(cardslength - 1))]}
-      .card-image= image_tag("300w/#{x[:picture]}")
-      %h4= x[:name]
+      .card-image= image_tag("#{x[:picture]}")
+      %h3= x[:name]
       %p= x[:bio]

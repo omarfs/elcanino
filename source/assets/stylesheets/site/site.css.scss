@@ -1,23 +1,18 @@
 // Colors
-
 $ec-pantonegreen: #009B77;
 $ec-dark-grey: #1A1A1A;
 $ec-blue: #0645AD;
 $ec-red: #D60054;
 $ec-green: #00C36A;
-
-$white: #ffffff;
-
 // Measurements
-
 $max-width: 958px;
-
+//
 html{
 	background-color: lighten($ec-dark-grey, 5%);
 	width: 100%;
 }
 body{
-	background-color: $white;
+	background-color: white;
 	margin: 0 auto;
 	max-width: 1600px;
 	position: relative;
@@ -71,7 +66,7 @@ section, article{
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		color: $white;
+		//color: $white;
 		padding: 16em 4%;
 		@media screen and (max-width: 550px) {
 			padding: 10em 4%;
@@ -93,7 +88,7 @@ section, article{
   box-sizing: border-box;
   -webkit-appearance: none;
   &:hover {
-    background-color: $white;
+    background-color: white;
     color: $ec-pantonegreen;
     @include transition(all 0.1s ease);
   }
@@ -103,7 +98,7 @@ section, article{
 }
 //
 .site-header{
-	background-color: rgba($white,1);
+	background-color: rgba($ec-dark-grey,.6);
 	height: 100px;
 	margin: 0 auto;
 	max-width: 1600px;
@@ -120,7 +115,7 @@ section, article{
 		padding: 4em 2em;
 	}
 	.scrolling & {
-		background-color: rgba($white,0.9);
+		background-color: rgba(white,0.9);
 		height: 60px;
 		padding: 0.8em 1em;
 		@media screen and (min-width: 550px){
@@ -217,7 +212,38 @@ section, article{
 	  }
 	}
 }
-//
+// general usage stuff
+.cards{
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include justify-content(center);
+	//color: $white;
+	.card{
+		@include flex-basis(310px);
+		@include flex-grow(0);
+		margin: 1em 1.5em;
+		//background-color: $ec-dark-grey;
+		.card-image{
+			overflow: hidden;
+			max-width: 200px;
+			max-height: 200px;
+			border-radius: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			img{
+				max-width: 100%;
+			}
+		}
+		h3{
+			text-align: center;
+			padding: 1.2em 0;
+		}
+		p{
+			text-align: center;
+			padding: 0 0.5em 1em 0.5em;
+		}
+	}
+}
 .social-icons {
   margin: 0 0 1.5em;
   padding: 0;
@@ -278,88 +304,25 @@ section, article{
 }
 //
 .home{
-	//height: 1200px;
 	header{
+		background-color: $ec-green;
 		h1{
 			text-align: center;
 			font-size: 4em;
 		}
 	}
-	.home-about-us{
-		background-color: $ec-pantonegreen;
-		color: $white;
-		h3{
-			//background-color: $ec-blue;
-			display: block;
-			text-align: center;
-			//width: 100%;
-			//font-size: 3.6em;
-			@media screen and (min-width: 750px){
-				//display: block;
-				float: left;
-				margin-right: -100%;
-				margin-left: 0;
-				width: 48%;
-			}
-		}
-		p{
-			display: block;
-			margin: 0 0 2em;
-
-			@media screen and (min-width: 750px){
-				//display: block;
-				float: left;
-				margin-right: -100%;
-				margin-left: 52%;
-				width: 48%;
-			}
-		}
-	}
-	.home-staff{
-		background-color: $ec-red;
-		.cards{
-			@include display(flex);
-			@include flex-wrap(wrap);
-  		@include justify-content(center);
-  		color: $white;
-			.card{
-				@include flex-basis(250px);
-  			@include flex-grow(0);
-				margin: 1em 1.5em;
-				.card-image{
-					overflow: hidden;
-					max-width: 150px;
-					max-height: 150px;
-					border-radius: 100%;
-					margin-left: auto;
-					margin-right: auto;
-					img{
-						max-width: 100%;
-					}
-				}
-				h4{
-					text-align: center;
-					padding: 0 1em;
-				}
-				p{
-					text-align: center;
-					padding: 0 1em;
-				}
-			}
-		}
-	}
 }
 .featured-projects{
 	background-color: $ec-blue;
-	color: $white;
+	color: white;
 	padding: 0 !important;
 	img{
 		width: 100%;
 	}
 	.button{
-		background-color: $white;
+		background-color: white;
 		&:hover{
-			background-color: rgba($white, 0.7);
+			background-color: rgba(white, 0.7);
 		}
 	}
 	.ft-anim-content{
@@ -367,13 +330,46 @@ section, article{
 	}
 	article{
 		background-color: rgba($ec-red, 0.6);
-		background-image: url("../images/hd-boxer-dog.jpg");
+		background-image: url("../images/dogs-tennis-ball-1600x900.jpg");
 		//display: block;
 		text-align: center;
 		position: relative;
 		opacity: 1;
 		h2,p,.button{
 			position:relative;
+		}
+	}
+}
+.home-staff{
+	background-color: $ec-red;
+}
+.home-about-us{
+	background-color: $ec-pantonegreen;
+	color: white;
+	h3{
+		//background-color: $ec-blue;
+		display: block;
+		text-align: center;
+		//width: 100%;
+		//font-size: 3.6em;
+		@media screen and (min-width: 750px){
+			//display: block;
+			float: left;
+			margin-right: -100%;
+			margin-left: 0;
+			width: 48%;
+		}
+	}
+	p{
+		display: block;
+		margin: 0 0 2em;
+
+		@media screen and (min-width: 750px){
+			//display: block;
+			float: left;
+			margin-right: -100%;
+			margin-left: 52%;
+			width: 48%;
 		}
 	}
 }

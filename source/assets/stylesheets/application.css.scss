@@ -1,19 +1,12 @@
 // Bower components
-//= require royalslider/royalslider.css
-//= require royalslider/rs-default-inverted.css
-
-
 
 
 //bourbon, neat & bitters
-@import "../_vendor/normalize/normalize";
-@import "../_vendor/bourbon/bourbon";
+@import "normalize/normalize";
+@import "bourbon/bourbon";
 @import "base/grid-settings";
-@import "../_vendor/neat/neat";
+@import "neat/neat";
 @import "base/base";
-@import "../_vendor/better-bourbon-buttons/bbb";
-//@import "../_vendor/royalslider/royalslider";
-//@import "../_vendor/royalslider/rs-default-inverted";
 
 @import "font-awesome";
 

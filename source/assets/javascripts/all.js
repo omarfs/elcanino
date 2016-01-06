@@ -6,8 +6,8 @@
 //= require "smooth-scroll.js/smooth-scroll.min.js"
 //= require "gsap/minified/TweenMax.min.js"
 //= require "ScrollMagic/minified/ScrollMagic.min.js"
-//= require "debug.addIndicators.min.js"
-//= require "animation.gsap.min.js"
+//= require "ScrollMagic/minified/plugins/debug.addIndicators.min.js"
+//= require "ScrollMagic/minified/plugins/animation.gsap.min.js"
 //= require "simplbox/simplbox.min.js"
 //= require_tree .
 

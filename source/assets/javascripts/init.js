@@ -20,10 +20,12 @@ var removeClass = function(elem, className){
 
 if ( 'querySelector' in document && 'addEventListener' in window) {
 
-	var body = document.querySelector('body');
+	var body = document.querySelector('body'),
+			sectionHeader = document.querySelector('section header'),
+			triggerAmount = 0.5;
 
 	document.addEventListener('scroll', function(){
-		console.log('scrolling')
+		//console.log('scrolling')
 		var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop), headerHeight = document.querySelector('.site-header').offsetHeight;
 		if(scrollTop >= 5) {
 			addClass(body,'scrolling')
@@ -32,5 +34,23 @@ if ( 'querySelector' in document && 'addEventListener' in window) {
 		}
 	});
 
+	var controller = new ScrollMagic.Controller({
+		globalSceneOptions: {
+			triggerHook: triggerAmount
+		}
+	});
 
+	if(sectionHeader){
+		var it = new TimelineMax(), animContent = '.animated-content';
+		it.set(animContent, {force3D: true, transformOrigin: "center center"})
+			.from(animContent, 1, {opacity: 1, scale: 1 })
+			.to(animContent, 1, {opacity: 0, scale: 1.2 });
+		var homeScene = new ScrollMagic.Scene({
+			triggerElement: sectionHeader,
+			offset: -50,
+			duration: 1500
+		})
+		.setTween(it)
+		.addTo(controller)
+	}
 }
