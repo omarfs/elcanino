@@ -4,26 +4,32 @@ $ec-pantonegreen: #009B77;
 $ec-dark-grey: #1A1A1A;
 $ec-blue: #0645AD;
 $ec-red: #D60054;
-$ec-green: #00C36A;
+$ec-green: #168316;
+$ec-green-alt: #1C4C54;
+$ec-green-final: #0D670C;
 //$ec-yellow: rgba(201, 140, 47, 1);
-$ec-yellow: #C98C2F;
-$ec-yellow-alt: #FFC300;
-
-// Measurements
-
-$max-width: 958px;
-
+$ec-yellow: #FF9900;
+$ec-yellow-alt: #FFA31A;
+$ec-dark-grey-alt: #424242;
+$ec-light-grey: #e9e9e9;
+$ec-medium-grey: #bcbcbc;
+$ec-zapote: #AD0505;
+$ec-orange: #ff6600;
+//
+//$max-width: 958px;
+//
 html{
-	background-color: lighten($ec-yellow, 5%);
+	background-color: lighten($ec-dark-grey, 15%);
+	//background-color: $ec-yellow;
 	width: 100%;
 }
 body{
-	background-color: white;
+	background-color: $ec-light-grey;
 	margin: 0 auto;
 	max-width: 1600px;
-	position: relative;
+	//position: relative;
 	width: 100%;
-	font: 400 100%/1.5;
+	font: 400 100%/1.5 'Roboto';
 	@media screen and (min-width: 1150px){
 		font-size: 112.5%;
 	}
@@ -104,11 +110,11 @@ section, article{
 }
 //
 .site-header{
-	background-color: rgba($ec-dark-grey,1);
+	background-color: $ec-yellow-alt;
 	height: 100px;
 	margin: 0 auto;
 	max-width: 1600px;
-	padding: 1em 0;
+	padding: 1.25em 0;
 	position: fixed;
 	top: 0;
 	text-align: center;
@@ -117,24 +123,23 @@ section, article{
 	box-sizing: border-box;
 	@include transition(all 0.5s ease-in-out);
 	@media screen and (min-width: 550px){
-		height: 190px;
-		padding: 3.5em 2em;
+		height: 150px;
+		padding: 1.8em 2em;
 	}
 	.scrolling & {
-		background-color: rgba($ec-dark-grey,0.8);
+		background-color: rgba($ec-yellow-alt,0.9);
 		height: 70px;
-		padding: 0.1em;
+		padding: 0.6em;
 		@media screen and (min-width: 550px){
 			height: 100px;
-			padding: 1em 2em;
+			padding: 1.25em 2em;
 		}
 	}
 }
 .site-nav{
 	text-align: center;
 	font-weight: 500;
-	font-size: 0.8em;
-	margin-top: 0.5em;
+	font-size: 0.9em;
 	li {
 		display: inline-block;
 		margin-right: 1em;
@@ -143,24 +148,28 @@ section, article{
 		}
 	}
 	a {
+		font-variant: small-caps;
+		color: $ec-green-final;
 		&:hover, &.active {
-			color: $ec-red;
+			color: rgba($ec-green-final,0.8);
 		}
 	}
-	@media screen and (min-width: 550px){
+	@media screen and (min-width: 400px){
 		font-size: 1em;
 		li {
-			margin-right: 2em;
+			margin-right: 1.5em;
 		}
 	}
 	@media screen and (min-width: 750px){
+		font-size: 1.1em;
 		li {
-			margin-right: 4em;
+			margin-right: 3em;
 		}
 	}
 	@media screen and (min-width: 950px){
+		font-size: 1.3em;
 		li {
-			margin-right: 6em;
+			margin-right: 5em;
 		}
 	}
 }
@@ -195,7 +204,7 @@ section, article{
 }
 //
 .social-icons {
-  margin: 0 0 1.5em;
+  //margin: 0 0 1.5em;
   padding: 0;
 	text-align: center;
 	span {
@@ -210,30 +219,30 @@ section, article{
       font-size: 1.8em;
     }
 		@media screen and (min-width: 750px){
-			margin-right: 0.3em;
+			margin-right: 0.4em;
 		}
     &:last-child {
       margin: 0;
     }
     a {
     	display: inline-block;
-      border-color: $ec-pantonegreen;
+      border-color: $ec-green-alt;
       border-style: solid;
-      border-width: 3px;
+      border-width: 4px;
       border-radius: 50%;
-      color: $ec-pantonegreen;
+      color: $ec-green-alt;
       width: 2em;
       height: 2em;
-      padding-top: 0.2em;
+      padding-top: 0.1em;
       text-align: center;
       @include transition(all 0.1s ease);
 			@media screen and (min-width: 450px) {
-				border-width: 5px;
+				border-width: 6px;
 				padding-top: 0.1em;
 			}
       &:hover {
-        border-color: $ec-red;
-        color: $ec-red;
+        border-color: rgba($ec-green-alt,0.8);
+        color: rgba($ec-green-alt,0.8);
       }
     }
   }
@@ -256,101 +265,134 @@ section, article{
 .home{
 	//height: 1200px;
 	header{
+		background-color: $ec-yellow-alt;
 		h1{
+			color: $ec-green-final;
 			text-align: center;
-			font-size: 4em;
-		}
-	}
-	.home-about-us{
-		background-color: $ec-pantonegreen;
-		color: white;
-		h3{
-			//background-color: $ec-blue;
-			display: block;
-			text-align: center;
-			//width: 100%;
-			//font-size: 3.6em;
-			@media screen and (min-width: 750px){
-				//display: block;
-				float: left;
-				margin-right: -100%;
-				margin-left: 0;
-				width: 48%;
-			}
+			font-size: 2.6em;
 		}
 		p{
-			display: block;
-			margin: 0 0 2em;
-
-			@media screen and (min-width: 750px){
-				//display: block;
-				float: left;
-				margin-right: -100%;
-				margin-left: 52%;
-				width: 48%;
+			color: $ec-green-alt;
+			font-size: 1em;
+		}
+		@media screen and (min-width: 650px){
+			h1{
+				font-size: 3em;
+			}
+			p{
+				font-size: 1.2em;
+			}
+		}
+		@media screen and (min-width: 950px){
+			h1{
+				font-size: 4em;
+			}
+			p{
+				font-size: 1.4em;
 			}
 		}
 	}
-	.home-staff{
-		//background-color: $ec-red;
-		background-color: $ec-yellow;
-		.cards{
-			@include display(flex);
-			@include flex-wrap(wrap);
-  		@include justify-content(center);
-  		color: white;
-			.card{
-				@include flex-basis(250px);
-  			@include flex-grow(0);
-				margin: 1em 1.5em;
-				.card-image{
-					overflow: hidden;
-					max-width: 150px;
-					max-height: 150px;
-					border-radius: 100%;
-					margin-left: auto;
-					margin-right: auto;
-					img{
-						max-width: 100%;
-					}
+}
+.home-about-us{
+	background-color: lighten($ec-light-grey,0%);
+	//color: white;
+	h1{
+		color: $ec-zapote;
+		text-align: center;
+		font-size: 2.6em;
+		@media screen and (min-width: 750px){
+			font-size: 3.6em;
+			float: left;
+			margin-right: -100%;
+			margin-left: 0;
+			width: 48%;
+		}
+	}
+	p{
+		color: $ec-green-alt;
+		margin: 0 0 2em;
+		font-size: 1.2em;
+		@media screen and (min-width: 750px){
+			font-size: 1.6em;
+			font-weight: 600;
+			float: left;
+			margin-right: -100%;
+			margin-left: 52%;
+			width: 48%;
+		}
+	}
+}
+.home-staff{
+	//background-color: $ec-red;
+	background-color: $ec-yellow-alt;
+	.cards{
+		@include display(flex);
+		@include flex-wrap(wrap);
+		@include justify-content(center);
+		//color: white;
+		.card{
+			@include flex-basis(300px);
+			@include flex-grow(0);
+			margin: 1em 1.5em;
+			.card-image{
+				overflow: hidden;
+				max-width: 200px;
+				max-height: 200px;
+				border-radius: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				img{
+					max-width: 100%;
 				}
-				h4{
-					text-align: center;
-					padding: 0 1em;
-				}
-				p{
-					text-align: center;
-					padding: 0 1em;
-				}
+			}
+			h2{
+				text-align: center;
+				color: $ec-zapote;
+				font-weight: bolder;
+				padding: 1.5em 1em 1em 1em;
+			}
+			p{
+				color: $ec-green-alt;
+				font-weight: bolder;
+				text-align: center;
+				padding: 0 1em;
 			}
 		}
 	}
 }
 .featured-projects{
-	background-color: $ec-blue;
-	color: white;
 	padding: 0 !important;
-	img{
-		width: 100%;
-	}
-	.button{
-		background-color: white;
-		&:hover{
-			background-color: rgba(white, 0.7);
-		}
-	}
-	.ft-anim-content{
-		position: relative;
-	}
+	position: relative;
 	article{
-		background-color: rgba($ec-red, 0.6);
-		background-image: url("../images/dogs-tennis-ball-1600x900.jpg");
-		//display: block;
-		text-align: center;
+		overflow: auto;
 		position: relative;
-		opacity: 1;
-		h2,p,.button{
-			position:relative;
+		background-image: linear-gradient(40deg, #C9DAE8,  rgba(255, 255, 255, 0.4)), url("../images/dogs-tennis-ball-1600x900.jpg");
+		text-align: center;
+		h1{
+			color: $ec-zapote;
+			font-size: 2.6em;
 		}
+		h2{
+			color: $ec-green-alt;
+			font-size: 1.6em;
+		}
+	}
+}
+.contact-us{
+	background-color: lighten($ec-yellow-alt,0%);
+	h1{
+		font-size: 2.6em;
+		color: $ec-green-final;
+	}
+	p{
+		font-size: 2em;
+		color: $ec-dark-grey-alt;
+	}
+}
+.site-footer{
+	padding:  1.5em;
+	//background-color: $ec-zapote;
+	.ec-copy{
+		color: $ec-zapote;
 	}
 }

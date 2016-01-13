@@ -20,7 +20,7 @@ end
 #     "Helping"
 #   end
 # end
-# set host for responsive images 
+# set host for responsive images
 #activate :asset_host
 #set :asset_host, 'http://localhost:4567'
 #

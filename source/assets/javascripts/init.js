@@ -27,7 +27,7 @@ if ( 'querySelector' in document && 'addEventListener' in window) {
 	document.addEventListener('scroll', function(){
 		//console.log('scrolling')
 		var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop), headerHeight = document.querySelector('.site-header').offsetHeight;
-		if(scrollTop >= 5) {
+		if(scrollTop >= 15) {
 			addClass(body,'scrolling')
 		} else {
 			removeClass(body,'scrolling')
