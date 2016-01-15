@@ -10,17 +10,17 @@
     <title>
       welcome to el canino
     </title>
-    <link href="assets/stylesheets/application-1daaaab4.css" rel="stylesheet" />
+    <link href="assets/stylesheets/application-57b41186.css" rel="stylesheet" />
   </head>
   <body class='index'>
     <header class='site-header'>
-      <nav class='site-nav' role='navigation'>
+      <nav class='site-nav' data-scroll-header role='navigation'>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a data-scroll="true" href="#home">Home</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a data-scroll="true" href="#about">About</a>
           </li>
           <li>
             <div class='logo'>
@@ -28,10 +28,10 @@
             </div>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a data-scroll="true" href="#services">Services</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a data-scroll="true" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -112,5 +112,8 @@
       </div>
     </footer>
     <script src="assets/javascripts/all-c72abb7b.js"></script>
+    <script>
+      smoothScroll.init();
+    </script>
   </body>
 </html>
