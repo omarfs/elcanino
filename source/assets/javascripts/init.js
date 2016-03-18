@@ -26,7 +26,8 @@ if ( 'querySelector' in document && 'addEventListener' in window) {
 
 	document.addEventListener('scroll', function(){
 		//console.log('scrolling')
-		var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop), headerHeight = document.querySelector('.site-header').offsetHeight;
+		var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop),
+				headerHeight = document.querySelector('.site-header').offsetHeight;
 		if(scrollTop >= 15) {
 			addClass(body,'scrolling')
 		} else {
@@ -53,4 +54,15 @@ if ( 'querySelector' in document && 'addEventListener' in window) {
 		.setTween(it)
 		.addTo(controller)
 	}
+
+	var anchors = document.querySelectorAll( '[href*="#"]' );
+	for ( var i = 0, len = anchors.length; i < len; i++ ) {
+		//var url = new RegExp( window.location.hostname + window.location.pathname );
+			var url = new RegExp( window.location.hostname);
+			if ( !url.test( anchors[i].href ) ) continue;
+      anchors[i].setAttribute( 'data-scroll', true );
+	}
+
+	// Initial smooth scroll (add your attributes as desired)
+	smoothScroll.init();
 }

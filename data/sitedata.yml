@@ -1,10 +1,13 @@
-:staff:
-  - :name: Lorem ipsum dolor
-    :bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus enim, vulputate in libero non, tristique imperdiet metus. Curabitur efficitur consequat mi, a viverra elit tristique quis. Ut purus nibh, suscipit vitae nulla et, laoreet rutrum tellus.
-    :picture: tarzan-200x200.jpg
-  - :name: Lorem ipsum dolor
-    :bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus enim, vulputate in libero non, tristique imperdiet metus. Curabitur efficitur consequat mi, a viverra elit tristique quis. Ut purus nibh, suscipit vitae nulla et, laoreet rutrum tellus.
-    :picture: lucy-200x200.jpg
-  - :name: Lorem ipsum dolor
-    :bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus enim, vulputate in libero non, tristique imperdiet metus. Curabitur efficitur consequat mi, a viverra elit tristique quis. Ut purus nibh, suscipit vitae nulla et, laoreet rutrum tellus.
-    :picture: mia-200x200.jpg
+staff:
+  - name: Lorem ipsum dolor
+    bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus enim, vulputate in libero non, tristique imperdiet metus. Curabitur efficitur consequat mi, a viverra elit tristique quis. Ut purus nibh, suscipit vitae nulla et, laoreet rutrum tellus.
+    picture: lucy-200x200.jpg
+  - name: Lorem ipsum dolor
+    bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus enim, vulputate in libero non, tristique imperdiet metus. Curabitur efficitur consequat mi, a viverra elit tristique quis. Ut purus nibh, suscipit vitae nulla et, laoreet rutrum tellus.
+    picture: mia-200x200.jpg
+clients:
+  - dog:
+    human:
+    bio:
+    picture:
+    testimonial:

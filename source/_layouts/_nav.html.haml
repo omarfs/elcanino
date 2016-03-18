@@ -1,13 +1,12 @@
-%nav.site-nav{ :role => 'navigation'}
+%nav.site-nav{ :role => 'navigation', :data => {'scroll-header' => true}}
 	%ul
 		%li
-			= link_to 'Home', '/home'
+			= link_to('#home'){'Home'}
 		%li
-			= link_to 'About', '/about/'
+			= link_to('#about'){'About'}
 		%li
-			.logo
-				= image_tag('logo.svg')
+			= partial("logo")
 		%li
-			= link_to 'Services', '/services/'
+			= link_to('#services'){'Services'}
 		%li
-			= link_to 'Contact', '/contact/'
+			= link_to('#contact'){'Contact'}
